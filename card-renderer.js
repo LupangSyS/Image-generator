@@ -445,3 +445,101 @@ function syncFormFromState() {
 }
 
 render();
+
+// ===== Card database (data/cards.json) =====
+// Loads the parsed Camelot card list and lets the user pick one to prefill
+// the form. Artwork is never generated here — if a file matching the card's
+// id exists under assets/art/, it's loaded automatically; otherwise the
+// panel just shows the "upload artwork" placeholder until you add one.
+
+let cardDatabase = [];
+
+const RARITY_BY_CATEGORY = {
+  champion: 'RARE',
+  role: 'MYTHIC',
+  relic: 'EPIC',
+  spell: 'UNCOMMON',
+  'basic-art': 'COMMON',
+};
+
+const ART_EXTENSIONS = ['png', 'jpg', 'jpeg', 'webp'];
+
+function tryLoadArtForCard(cardId) {
+  const hint = document.getElementById('db-art-hint');
+  let i = 0;
+  function attempt() {
+    if (i >= ART_EXTENSIONS.length) {
+      state.artImage = null;
+      hint.textContent = `No artwork found in assets/art/ for "${cardId}" yet — upload one above, or drop a file named ${cardId}.png there and reload.`;
+      render();
+      return;
+    }
+    const ext = ART_EXTENSIONS[i++];
+    const url = `assets/art/${cardId}.${ext}`;
+    const img = new Image();
+    img.onload = () => {
+      state.artImage = img;
+      hint.textContent = `Loaded artwork: assets/art/${cardId}.${ext}`;
+      render();
+    };
+    img.onerror = attempt;
+    img.src = url;
+  }
+  attempt();
+}
+
+function applyCardToState(card) {
+  state.name = (card.nameEn || card.nameTh || '').toUpperCase();
+  state.subname = card.nameTh || '';
+  state.cost = card.number || 0;
+  state.rarity = RARITY_BY_CATEGORY[card.category] || 'COMMON';
+  state.title = card.title || card.category.toUpperCase();
+  state.showCrown = card.category === 'role' || card.category === 'champion';
+
+  const abilities = card.abilities || [];
+  state.ab1Name = (abilities[0] && abilities[0].name) || '';
+  state.ab1Text = (abilities[0] && abilities[0].text) || '';
+  state.ab2Name = (abilities[1] && abilities[1].name) || '';
+  state.ab2Text = (abilities[1] && abilities[1].text) || '';
+
+  state.flavor = card.flavor || '';
+  state.atk = card.hp ? parseInt(card.hp, 10) || 0 : 0;
+  state.def = card.hp ? parseInt(card.hp, 10) || 0 : 0;
+  state.footer = `CAMELOT: ARCANE REALM • ${card.category.toUpperCase()} ${String(card.number).padStart(2, '0')}`;
+
+  syncFormFromState();
+  tryLoadArtForCard(card.id);
+  render();
+}
+
+fetch('data/cards.json')
+  .then((r) => r.json())
+  .then((cards) => {
+    cardDatabase = cards;
+    const select = document.getElementById('f-db-select');
+    const groups = {};
+    cards.forEach((c) => {
+      groups[c.category] = groups[c.category] || [];
+      groups[c.category].push(c);
+    });
+    Object.keys(groups).forEach((cat) => {
+      const optgroup = document.createElement('optgroup');
+      optgroup.label = cat;
+      groups[cat].forEach((c) => {
+        const opt = document.createElement('option');
+        opt.value = c.id;
+        opt.textContent = `${c.nameEn} (${c.nameTh})`;
+        optgroup.appendChild(opt);
+      });
+      select.appendChild(optgroup);
+    });
+    select.addEventListener('change', () => {
+      if (!select.value) return;
+      const card = cardDatabase.find((c) => c.id === select.value);
+      if (card) applyCardToState(card);
+    });
+  })
+  .catch(() => {
+    const hint = document.getElementById('db-art-hint');
+    if (hint) hint.textContent = 'Could not load data/cards.json (open via a local server, not file://).';
+  });

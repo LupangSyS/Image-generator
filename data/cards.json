@@ -1,0 +1,913 @@
+[
+  {
+    "id": "role-the-high-king",
+    "category": "role",
+    "number": 1,
+    "nameTh": "กษัตริย์อาเธอร์",
+    "nameEn": "The High King",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "หงายหน้าเสมอ, พลังชีวิตสูงสุด $+1$, จั่วการ์ดแรกเริ่ม $+1$ ใบ กำจัดกบฏและผู้แฝงตัว"
+      }
+    ],
+    "flavor": "จำนวนในเกม: 1 ใบ",
+    "artPrompt": "Tarot style role card, King Arthur sitting majestically on the glowing Round Table throne, wearing ornate golden plate armor adorned with royal lions, holding the blazing sword Excalibur upright, divine sun rays piercing through cathedral stained glass windows, regal, sacred aura, dark atmospheric background, hyper-detailed fantasy illustration --ar 5:7"
+  },
+  {
+    "id": "role-holy-knights",
+    "category": "role",
+    "number": 2,
+    "nameTh": "อัศวินผู้ภักดี",
+    "nameEn": "Holy Knights",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "คว่ำหน้า, ปกป้องราชาอาเธอร์ และกำจัดศัตรูทั้งหมดของราชสำนัก"
+      }
+    ],
+    "flavor": "จำนวนในเกม: 1-3 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "role-shadow-coven",
+    "category": "role",
+    "number": 3,
+    "nameTh": "ลัทธิเงามืด",
+    "nameEn": "Shadow Coven",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "คว่ำหน้า, กำจัดราชาอาเธอร์ให้สิ้นชีพเพื่อชัยชนะ"
+      }
+    ],
+    "flavor": "จำนวนในเกม: 1-4 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "role-the-renegade-usurper",
+    "category": "role",
+    "number": 4,
+    "nameTh": "ผู้แฝงตัว",
+    "nameEn": "The Renegade / Usurper",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "คว่ำหน้า, ต้านทานคำสาป 1 ครั้ง, สังหารทุกคนจนเหลือ 1 ต่อ 1 กับราชา แล้วสังหารราชาเป็นคนสุดท้าย"
+      }
+    ],
+    "flavor": "จำนวนในเกม: 1-2 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "king-arthur",
+    "category": "champion",
+    "number": 1,
+    "nameTh": "กษัตริย์อาเธอร์",
+    "nameEn": "King Arthur",
+    "title": "The Chosen Monarch",
+    "hp": "4 (เป็นประมุขได้ 5)",
+    "abilities": [
+      {
+        "name": "พระราชโองการศักดิ์สิทธิ์:",
+        "text": "พันธมิตรที่ร่ายการ์ดธาตุศักดิ์สิทธิ์ (♣) มอบผลการฟื้นเลือดให้อาเธอร์ได้"
+      },
+      {
+        "name": "ดาบในศิลา:",
+        "text": "เมื่อสังหารศัตรูสำเร็จ ได้รับยุทโธปกรณ์ระดับเทพ 1 ชิ้นจากสุสานขึ้นมือ"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Full character portrait of King Arthur, a commanding noble king in radiant golden filigree armor, wearing a majestic crown of dragon teeth, holding Excalibur charged with blinding cyan holy energy, piercing blue eyes, heroic and resolute, ruined gothic throne room with hovering dust particles, fantasy art masterpiece --ar 5:7"
+  },
+  {
+    "id": "sir-lancelot",
+    "category": "champion",
+    "number": 2,
+    "nameTh": "เซอร์ลานเซล็อต",
+    "nameEn": "Sir Lancelot",
+    "title": "Champion of the Lake",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "เพลงดาบไร้พ่าย:",
+        "text": "ทิ้งการ์ด 1 ใบเพื่อให้การโจมตีไม่สามารถป้องกันด้วยม่านบาเรียได้"
+      },
+      {
+        "name": "เกราะมังกรคลั่ง:",
+        "text": "เมื่อได้รับดาเมจ 1 หน่วย ได้จั่วการ์ด 1 ใบเข้ามือทันที"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Full portrait of Sir Lancelot, peerless warrior knight in sleek silver and blue damascus armor, dual-wielding etched broadswords infused with blue lightning, fierce determined battle gaze, lake of mist in the background, wind whipping his cape, dynamic epic fantasy card game character --ar 5:7"
+  },
+  {
+    "id": "sir-gawain",
+    "category": "champion",
+    "number": 3,
+    "nameTh": "เซอร์กาเวน",
+    "nameEn": "Sir Gawain",
+    "title": "Solar Champion",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "พลังสุริยัน:",
+        "text": "ตราบใดที่การ์ดบนมือ $\\ge$ เลือดปัจจุบัน ระยะโจมตี $+1$ และทำดาเมจแรงเป็น 2 หน่วย"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Solar knight Sir Gawain standing beneath a blazing solar eclipse, heavy golden armor sculpted with blazing sun symbols, fiery greatsword radiating intense solar heat waves and embers, glowing amber eyes, powerful stance, dramatic lighting, high fantasy digital art --ar 5:7"
+  },
+  {
+    "id": "sir-bedivere",
+    "category": "champion",
+    "number": 4,
+    "nameTh": "เซอร์เบดิเวียร์",
+    "nameEn": "Sir Bedivere",
+    "title": "Knight of the Silver Hand",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "แขนกลประกายแสง:",
+        "text": "ติดตั้งอาวุธได้พร้อมกัน 2 ชิ้น และใช้ผลของอาวุธทั้งสองผสานกันได้"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Grizzled veteran knight Sir Bedivere, featuring an intricate glowing silver magitech prosthetic left arm channeling arcane gears and blue runes, holding a carved halberd, weathered scarred face, heavy fur cloak, misty battlefield landscape, gritty realistic fantasy style --ar 5:7"
+  },
+  {
+    "id": "sir-kay",
+    "category": "champion",
+    "number": 5,
+    "nameTh": "เซอร์เคย์",
+    "nameEn": "Sir Kay",
+    "title": "The Grand Seneschal",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "สรรพเสบียงแห่งราชสำนัก:",
+        "text": "ช่วง Draw Phase เปิดการ์ด 4 ใบบนกอง ส่งให้เพื่อน 1 ใบ เก็บเข้ามือ 2 ใบ"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Sir Kay the royal seneschal, sharp calculating nobleman in dark crimson doublet layered over chainmail, holding a gilded warhammer in one hand and an arcane ledger with glowing keys in the other, royal armory background with floating weapons, haughty expression, detailed fantasy painting --ar 5:7"
+  },
+  {
+    "id": "sir-gareth",
+    "category": "champion",
+    "number": 6,
+    "nameTh": "เซอร์แกเร็ธ",
+    "nameEn": "Sir Gareth",
+    "title": "The Pure Gallant",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "เกราะพิทักษ์คำสัตย์:",
+        "text": "ทิ้งการ์ด 1 ใบเพื่อรับความเสียหายแทนพันธมิตรในระยะ 1 ช่อง"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Young valiant knight Sir Gareth, wearing polished white knight armor with green ivy engravings, brandishing a massive tower shield that emits an impenetrable magical barrier wall, brave and selfless demeanor, fantasy battlefield with incoming fire arrows bouncing off his shield --ar 5:7"
+  },
+  {
+    "id": "queen-guinevere",
+    "category": "champion",
+    "number": 7,
+    "nameTh": "ราชินีกวินิเวียร์",
+    "nameEn": "Queen Guinevere",
+    "title": "Sovereign Grace",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "พระบารมีราชินี:",
+        "text": "ผู้เล่นชายที่โจมตีกวินิเวียร์ต้องทิ้งการ์ด 1 ใบเป็นบรรณาการ มิฉะนั้นการโจมตีไร้ผล"
+      },
+      {
+        "name": "สานไมตรี:",
+        "text": "ส่งการ์ด 1 ใบให้อัศวินอื่นเพื่อฟื้นฟูเลือด 1 หน่วย (เทิร์นละ 1 ครั้ง)"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Queen Guinevere standing poised in an opulent palace balcony, wearing an emerald green and gold embroidered royal velvet gown, delicate platinum crown, holding a radiant white flower with glowing arcane dew, mesmerizing beauty, soft sunset light, intricate jewelry, fantasy card art --ar 5:7"
+  },
+  {
+    "id": "mordred",
+    "category": "champion",
+    "number": 8,
+    "nameTh": "มอร์เดร็ด",
+    "nameEn": "Mordred",
+    "title": "The Usurper Prince",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "คมดาบอาบยาพิษ:",
+        "text": "ศัตรูที่โดนโจมตีจะติดพิษ ฟื้นเลือดไม่ได้จนกว่าจะจบรอบของมอร์เดร็ด"
+      },
+      {
+        "name": "บัญชาทรยศ:",
+        "text": "หากโจมตี \"กษัตริย์อาเธอร์\" จะได้จั่วการ์ดฟรี 1 ใบก่อนคิดดาเมจ"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Mordred, the black prince of rebellion, wearing jagged spiky obsidian plate armor with blood-red runes, wielding a serrated executioner blade oozing dark purple venom, demonic crown-like helmet, ruthless piercing stare, burnt battlefield of Camlann in background, dark fantasy aesthetic --ar 5:7"
+  },
+  {
+    "id": "morgan-le-fay",
+    "category": "champion",
+    "number": 9,
+    "nameTh": "มอร์กาน่า เลอ เฟย์",
+    "nameEn": "Morgan le Fay",
+    "title": "High Sorceress",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "มายาภาพลวงตา:",
+        "text": "สุ่มขโมยการ์ดเป้าหมาย 1 ใบ แล้วมอบการ์ดเราคืนให้ 1 ใบ"
+      },
+      {
+        "name": "สาปแช่งวิญญาณ:",
+        "text": "เมื่อบาดเจ็บ บังคับให้ผู้โจมตีเลือก: ทิ้งการ์ด 2 ใบ หรือเสียเลือด 1 หน่วย"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Morgan le Fay, supreme sorceress of dark arts, floating above a pool of black mirrors, raven-feathered obsidian dress, flowing raven hair, pale complexion, casting swirling emerald and violet forbidden flames from her fingertips, mysterious alluring and dangerous, gothic dark fantasy art --ar 5:7"
+  },
+  {
+    "id": "sir-agravain",
+    "category": "champion",
+    "number": 10,
+    "nameTh": "เซอร์อักราแวน",
+    "nameEn": "Sir Agravain",
+    "title": "The Whispering Blade",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "มนต์เปิดโปงพิรุธ:",
+        "text": "บังคับให้เป้าหมายเผยการ์ดบนมือ หากไม่มี \"ม่านบาเรีย\" ทำดาเมจ 1 หน่วยทันที"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Sir Agravain the inquisitor assassin, wearing sleek midnight-black leather armor reinforced with blackened steel plates, face half-hidden by a dark cowl, twirling twin curved stiletto daggers reflecting purple magical venom, shadowy corridors of Camelot, sinister expression --ar 5:7"
+  },
+  {
+    "id": "the-black-knight",
+    "category": "champion",
+    "number": 11,
+    "nameTh": "อัศวินดำ",
+    "nameEn": "The Black Knight",
+    "title": "The Undying Bulwark",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "ทมิฬกลืนพลัง:",
+        "text": "เมื่อได้รับดาเมจจากการ์ดโจมตี การ์ดใบนั้นจะลอยเข้าสู่มือตนเองแทนที่จะตกสุสาน"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "The Black Knight, a terrifying faceless colossus in battle-dented colossal midnight-iron armor, carrying a battered heavy zweihander resting on his shoulder, standing defiant on a broken stone bridge covered in thick fog, unmovable dread sentinel, dark souls aesthetic --ar 5:7"
+  },
+  {
+    "id": "king-lot",
+    "category": "champion",
+    "number": 12,
+    "nameTh": "ราชาล็อตแห่งออร์กนีย์",
+    "nameEn": "King Lot",
+    "title": "The Rebellion Lord",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "ปลุกระดมกบฏ:",
+        "text": "ทิ้งการ์ดอาวุธ 1 ชิ้น สั่งให้ผู้เล่น 2 คนในวงเปิดศึกดวลกันทันที"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "King Lot of Orkney, ruthless rebel warlord in spiked Nordic-style plate armor lined with wolf fur, crowned with iron antlers, raising an ancient battle axe commanding an unseen ghostly rebel army, howling blizzard background, fierce warlord energy --ar 5:7"
+  },
+  {
+    "id": "sir-balin",
+    "category": "champion",
+    "number": 13,
+    "nameTh": "เซอร์บาลิน",
+    "nameEn": "Sir Balin",
+    "title": "Knight of Two Swords",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "ดาบคู่สังหาร:",
+        "text": "โจมตีด้วยศรเวทได้ 2 ครั้งต่อเทิร์น"
+      },
+      {
+        "name": "ดาบสองคมต้องสาป:",
+        "text": "สละเลือดตนเอง 1 หน่วย ทำให้การโจมตีทำดาเมจพุ่งเป็น 3 หน่วยทันที"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Sir Balin, tragic doomed knight wields two distinct glowing cursed longswords—one emitting blood-red necrotic energy, the other pale ghostly flame, blood dripping onto desecrated temple floor, cursed runes carved into his flesh, intense grim expression, epic card game art --ar 5:7"
+  },
+  {
+    "id": "morgause",
+    "category": "champion",
+    "number": 14,
+    "nameTh": "มอร์กอส",
+    "nameEn": "Morgause",
+    "title": "Weaver of Shadows",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "คาถาสลับชะตา:",
+        "text": "เมื่อตกเป็นเป้าคำสาปหน่วงเวลา ทิ้งการ์ด 1 ใบย้ายคำสาปไปแปะใส่ผู้เล่นอื่นในระยะ 1"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Morgause the shadow enchantress, draped in a regal indigo gown embroidered with constellations, manipulating glowing spectral puppet strings connected to hovering arcane tarot cards, gothic chamber illuminated by black candles, enigmatic seductive expression --ar 5:7"
+  },
+  {
+    "id": "merlin",
+    "category": "champion",
+    "number": 15,
+    "nameTh": "เมอร์ลิน มหาจอมเวท",
+    "nameEn": "Merlin",
+    "title": "The Archmage",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "เนตรล่วงรู้อนาคต:",
+        "text": "ดูการ์ด 5 ใบบนสุดของกองจั่ว แล้วเรียงใหม่หรือทิ้งลงสุสานได้"
+      },
+      {
+        "name": "ธาตุแปรเปลี่ยน:",
+        "text": "เปลี่ยนการ์ดสีดำ (โพดำ/ดอกจิก) ให้กลายเป็นการ์ด \"เพลิงชำระล้าง\""
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Merlin the legendary archmage, elderly yet brimming with celestial power, long silver beard, deep starlight-blue robes inscribed with moving gold constellations, holding an ancient gnarled oak staff crowned with a floating cosmic orb, surrounded by floating spectral spell tomes, mystical stone circle background --ar 5:7"
+  },
+  {
+    "id": "nimue",
+    "category": "champion",
+    "number": 16,
+    "nameTh": "นิเวีย สตรีแห่งทะเลสาบ",
+    "nameEn": "Nimue",
+    "title": "Lady of the Lake",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "พรแห่งสายน้ำ:",
+        "text": "จั่วการ์ด 3 ใบ แล้วเลือกมอบให้ผู้เล่นอื่นในวง 1 ใบ"
+      },
+      {
+        "name": "จมดิ่งสู่วังวน:",
+        "text": "ทิ้งการ์ดธาตุพายุ (♠) 1 ใบ ปลดอาวุธ/เกราะของศัตรูลงสุสานทันที 1 ชิ้น"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Nimue, Lady of the Lake, ethereal aquatic fairy queen emerging from crystal-clear enchanted lake waters, gown woven from flowing water and iridescent water lilies, hands cupping a swirling water sphere holding floating ancient relics, bioluminescent glowing mist, dreamlike fantasy illustration --ar 5:7"
+  },
+  {
+    "id": "lady-viviane",
+    "category": "champion",
+    "number": 17,
+    "nameTh": "วิเวียน มหาปุโรหิตแห่งอวาลอน",
+    "nameEn": "Lady Viviane",
+    "title": "Mystic Matriarch",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "ม่านหมอกนิรันดร์:",
+        "text": "ผู้เล่นอื่นมองเห็นวิเวียนในระยะ $+1$ เสมอ และหากไม่มีของสวมใส่ จะไม่ตกเป็นเป้าการ์ดธาตุอัคคี"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "High Priestess Viviane, standing amidst the enchanted thick silver mist of Avalon, wearing ceremonial gossamer silk robes adorned with silver torcs, holding a crystalline staff crowned with blooming apple blossoms, magical glowing butterflies circling her, serene and unearthly --ar 5:7"
+  },
+  {
+    "id": "sir-tristan",
+    "category": "champion",
+    "number": 18,
+    "nameTh": "เซอร์ทริสตัน",
+    "nameEn": "Sir Tristan",
+    "title": "The Melodic Archer",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "ศรมนตราไร้เงา:",
+        "text": "ระยะโจมตีพื้นฐานเท่ากับ 3 ช่อง และยิงทะลุม้าศึกป้องกันได้เสมอ"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Sir Tristan, melancholy elven-blooded ranger knight drawing an ornate enchanted recurve bow strung with soundwaves of light, green and gold leather armor, a magical lute strapped to his back, dense enchanted autumnal forest background, sharp focus, fantasy digital art --ar 5:7"
+  },
+  {
+    "id": "princess-isolde",
+    "category": "champion",
+    "number": 19,
+    "nameTh": "เจ้าหญิงอิโซลเด",
+    "nameEn": "Princess Isolde",
+    "title": "The White Hand",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "สายใยน้ำเมามนตรา:",
+        "text": "ต้นเกมผูกชะตากับ 1 คน เมื่อคนนั้นได้รับการรักษา อิโซลเดจะฟื้นเลือดตามทันที"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Princess Isolde, pure maiden healer with golden hair woven with wild berries, wearing a pristine white and gold dress, holding an antique crystal vial containing a glowing pink love elixir, soft warm magical particles swirling around her hands, romantic and ethereal fantasy art --ar 5:7"
+  },
+  {
+    "id": "taliesin",
+    "category": "champion",
+    "number": 20,
+    "nameTh": "ทาเลียซิน",
+    "nameEn": "Taliesin",
+    "title": "The Arcane Bard",
+    "hp": "3",
+    "abilities": [
+      {
+        "name": "ลำนำแห่งวีรชน:",
+        "text": "เมื่อมีผู้เล่นร่ายมหาเวทฉับพลัน ทิ้งการ์ด 1 ใบเพื่อจั่วการ์ดใหม่ 2 ใบ (รอบละไม่เกิน 2 ครั้ง)"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Taliesin the mystic bard, playing an intricately carved ancient wooden harp whose vibrating strings summon visible glowing musical runes and mythical golden creatures into the air, wearing colorful patchwork travelers cloak, whimsical starry night background --ar 5:7"
+  },
+  {
+    "id": "sir-galahad",
+    "category": "champion",
+    "number": 21,
+    "nameTh": "เซอร์กาลาฮัด",
+    "nameEn": "Sir Galahad",
+    "title": "The Pure Soul",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "สัมผัสแห่งจอกศักดิ์สิทธิ์:",
+        "text": "สละเลือดตนเอง 1 หน่วย ให้พันธมิตรจั่วการ์ด 2 ใบและลบล้างคำสาปทั้งหมด"
+      },
+      {
+        "name": "กายาสิทธิ์:",
+        "text": "ภูมิคุ้มกันสมบูรณ์ต่อคำสาปหน่วงเวลาทุกชนิด"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Sir Galahad the saintly knight, pristine gleaming white plate armor adorned with gold filigree and holy dove crest, surrounded by an overwhelming divine golden halo, reaching out towards a floating radiant vision of the Holy Grail, immaculate and transcendent, sacred high fantasy art --ar 5:7"
+  },
+  {
+    "id": "sir-percival",
+    "category": "champion",
+    "number": 22,
+    "nameTh": "เซอร์เพอร์ซิวัล",
+    "nameEn": "Sir Percival",
+    "title": "Knight of the Innocent Heart",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "สัจธรรมชี้นำ:",
+        "text": "เมื่อเปิดการ์ดตัดสิน (Judgement) สามารถเปิดเพิ่มอีก 1 ใบแล้วเลือกใบที่ดีที่สุดได้เสมอ"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Sir Percival, humble and pure-hearted knight, kneeling in an ancient moss-covered stone chapel, worn steel armor with simple linen surcoat, holding his sword upright like a cross as divine white light illuminates his earnest face, quiet dignity, high fantasy oil painting style --ar 5:7"
+  },
+  {
+    "id": "sir-bors-the-younger",
+    "category": "champion",
+    "number": 23,
+    "nameTh": "เซอร์บอร์ส",
+    "nameEn": "Sir Bors the Younger",
+    "title": "The Unyielding Penitent",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "สมาธิบริสุทธิ์:",
+        "text": "ในเทิร์นที่ไม่ได้โจมตีเลย ช่วงทิ้งการ์ดจะสามารถเก็บการ์ดเกินขีดจำกัดเลือดได้ $+2$ ใบ"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "Sir Bors the stoic penitent knight, seated in deep ascetic meditation amidst crumbling gothic abbey ruins, heavy iron armor draped in coarse burlap robes, hands clasped around an iron rosary, stoic weathered face, faint protective holy barrier shimmering around him --ar 5:7"
+  },
+  {
+    "id": "the-green-knight",
+    "category": "champion",
+    "number": 24,
+    "nameTh": "อัศวินมรกต",
+    "nameEn": "The Green Knight",
+    "title": "The Immortal Giant",
+    "hp": "5",
+    "abilities": [
+      {
+        "name": "ศีรษะคืนร่าง:",
+        "text": "เมื่อเลือดหมดเหลือ 0 ครั้งแรกในเกม ฟื้นเลือดกลับมาที่ 2 ทันทีพร้อมจั่ว 2 ใบ"
+      },
+      {
+        "name": "ท้าดวลเกียรติยศ:",
+        "text": "เมื่อโจมตีใส่ศัตรู ศัตรูต้องทิ้งทั้งบาเรีย 1 ใบและอาวุธ 1 ชิ้นจึงจะหลบได้"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "The Green Knight, a colossal towering giant clad in living mossy emerald-green armor forged from ancient ironwood and thorny vines, holding a massive brutal greataxe with a glowing green runic edge, green mystical mist, glowing golden eyes, ancient forest overgrown ruins --ar 5:7"
+  },
+  {
+    "id": "the-questing-beast",
+    "category": "champion",
+    "number": 25,
+    "nameTh": "อสูรคำรามก้อง เควสติ้งบีสต์",
+    "nameEn": "The Questing Beast",
+    "title": "Abyssal Chimera",
+    "hp": "4",
+    "abilities": [
+      {
+        "name": "เสียงเพรียกกลืนวิญญาณ:",
+        "text": "ต้นเทิร์น ผู้เล่นในระยะ 1 ช่องต้องสุ่มทิ้งการ์ดคนละ 1 ใบ มิฉะนั้นเควสติ้งบีสต์จะได้จั่วเพิ่ม"
+      },
+      {
+        "name": "กัดขย้ำเกราะเวท:",
+        "text": "เมื่อโจมตีโดน ทำลายยุทโธปกรณ์ของเป้าหมายทิ้งทันที 1 ชิ้น"
+      }
+    ],
+    "flavor": "",
+    "artPrompt": "The legendary Questing Beast, monstrous mythical chimera having the slender head and neck of a serpent, the muscular body of a spotted leopard, the haunches of a lion, and the feet of a hart, magical acoustic shockwaves barking from its gaping maw, dark primeval woods --ar 5:7"
+  },
+  {
+    "id": "basic-art-arcane-slash",
+    "category": "basic-art",
+    "number": 1,
+    "nameTh": "ศรเวทมนตรา",
+    "nameEn": "Arcane Slash",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "โจมตี 1 ครั้งต่อเทิร์นใส่เป้าหมายในระยะ ทำดาเมจ 1 หน่วย"
+      }
+    ],
+    "flavor": "จำนวน: 24 ใบ",
+    "artPrompt": "Card art icon, a magical blade slash made of pure brilliant cyan arcane energy cutting through the dark void, glowing glyphs shattering into energy sparks, dynamic motion blur, high fantasy card spell art --ar 5:7"
+  },
+  {
+    "id": "basic-art-flame-strike",
+    "category": "basic-art",
+    "number": 2,
+    "nameTh": "ศรเพลิงผลาญ",
+    "nameEn": "Flame Strike",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "โจมตี 1 ดาเมจ หากโจมตีสำเร็จ เผาทำลายอุปกรณ์เป้าหมาย 1 ชิ้น"
+      }
+    ],
+    "flavor": "จำนวน: 6 ใบ",
+    "artPrompt": "Card art icon, a devastating magical fire sword thrust bursting into explosive golden-orange embers and swirling inferno runes, incinerating metallic armor pieces, intense heat distortion, dramatic lighting --ar 5:7"
+  },
+  {
+    "id": "basic-art-aegis-barrier",
+    "category": "basic-art",
+    "number": 3,
+    "nameTh": "ม่านบาเรียมนตรา",
+    "nameEn": "Aegis Barrier",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ร่ายตอบโต้ทันทีเมื่อถูกโจมตี เพื่อหักล้างดาเมจ 1 ครั้ง"
+      }
+    ],
+    "flavor": "จำนวน: 15 ใบ",
+    "artPrompt": "Card art icon, a translucent dome of geometric hexagonal golden arcane shield deflecting an incoming fiery arrow storm, energy shockwaves rippling across the barrier surface, mystical protection spell --ar 5:7"
+  },
+  {
+    "id": "basic-art-elixir-of-avalon",
+    "category": "basic-art",
+    "number": 4,
+    "nameTh": "น้ำอมฤตแห่งอวาลอน",
+    "nameEn": "Elixir of Avalon",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ดื่มเพื่อฟื้นฟูเลือด 1 หน่วย หรือชุบชีวิตผู้เล่นที่เลือดลดเหลือ 0"
+      }
+    ],
+    "flavor": "จำนวน: 8 ใบ",
+    "artPrompt": "Card art icon, an ornate silver and crystal chalice filled with glowing iridescent healing liquid, blooming white lilies and golden sparkles floating around it, sacred Avalon sanctuary background, divine blessing --ar 5:7"
+  },
+  {
+    "id": "relic-excalibur",
+    "category": "relic",
+    "number": 5,
+    "nameTh": "ดาบเอ็กซ์คาลิเบอร์",
+    "nameEn": "Excalibur",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ศัตรูต้องใช้ \"ม่านบาเรีย\" **2 ใบ** จึงจะป้องกันการโจมตีได้"
+      }
+    ],
+    "flavor": "จำนวน: 1 ใบ",
+    "artPrompt": "The mythical holy sword Excalibur resting vertically, blade forged from brilliant celestial sun-steel inscribed with ancient glowing gold runes, crossguard inlaid with deep sapphires, dazzling divine light beams bursting outward, legendary fantasy relic --ar 5:7"
+  },
+  {
+    "id": "relic-rhongomyniad",
+    "category": "relic",
+    "number": 6,
+    "nameTh": "หอกประกายแสง รอนโกมิเนียด",
+    "nameEn": "Rhongomyniad",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "การโจมตี **ทะลุเกราะ** ละเลยม่านบาเรียและผลเกราะป้องกันทั้งหมด"
+      }
+    ],
+    "flavor": "จำนวน: 2 ใบ",
+    "artPrompt": "The divine radiant lance Rhongomyniad hovering horizontally, tip crackling with blinding piercing lightning arcs, silver spiral spearhead, floating magical light particles, weapon of divine retribution --ar 5:7"
+  },
+  {
+    "id": "relic-carnwennan",
+    "category": "relic",
+    "number": 7,
+    "nameTh": "กริชพรางเงา คาร์นเวนแนน",
+    "nameEn": "Carnwennan",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "โจมตีด้วยศรเวทได้ **ไม่จำกัดจำนวนครั้ง** ในแต่ละเทิร์น"
+      }
+    ],
+    "flavor": "จำนวน: 3 ใบ",
+    "artPrompt": "A curved legendary shadow dagger Carnwennan wrapped in shadowy wisps and dark purple smoke, blade carved from black dragon bone, partially phasing in and out of invisibility, assassin relic --ar 5:7"
+  },
+  {
+    "id": "relic-staff-of-merlin",
+    "category": "relic",
+    "number": 8,
+    "nameTh": "ไม้เท้าแห่งเมอร์ลิน",
+    "nameEn": "Staff of Merlin",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "เปลี่ยนการ์ดสีแดงบนมือทุกใบให้กลายเป็นการ์ด \"ศรเวท\" ได้ตลอดเวลา"
+      }
+    ],
+    "flavor": "จำนวน: 2 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "relic-aravell-bow",
+    "category": "relic",
+    "number": 9,
+    "nameTh": "คันศรพรานไพร อาราเวล",
+    "nameEn": "Aravell Bow",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "โจมตีข้ามระยะได้ไกลถึง 5 ช่อง บีบให้เป้าหมายต้องทิ้งการ์ด 1 ใบหากหลบ"
+      }
+    ],
+    "flavor": "จำนวน: 2 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "relic-pridwen-shield",
+    "category": "relic",
+    "number": 10,
+    "nameTh": "โล่พริตเวน",
+    "nameEn": "Pridwen Shield",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "เมื่อโดนโจมตี เปิดการ์ดตัดสิน หากได้ไพ่สีแดง ถือว่าป้องกันได้ทันทีฟรี"
+      }
+    ],
+    "flavor": "จำนวน: 2 ใบ",
+    "artPrompt": "A legendary knightly heater shield Pridwen painted with the immaculate image of the Virgin Mary surrounded by silver filigree stars, emitting a radiant holy protective dome of pure light --ar 5:7"
+  },
+  {
+    "id": "relic-mantle-of-invisibility",
+    "category": "relic",
+    "number": 11,
+    "nameTh": "ผ้าคลุมล่องหนแห่งอวาลอน",
+    "nameEn": "Mantle of Invisibility",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ป้องกันไม่ให้ตกเป็นเป้าหมายของการ์ดเวทมนตร์เล็งเดี่ยว (ขโมย/พันธนาการ)"
+      }
+    ],
+    "flavor": "จำนวน: 2 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "relic-dragonscale-mail",
+    "category": "relic",
+    "number": 12,
+    "nameTh": "เกราะเกล็ดมังกรขาว",
+    "nameEn": "Dragonscale Mail",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ลดทอนดาเมจจากเวทมนตร์ธาตุอัคคีและสายฟ้าลง 1 หน่วยเสมอ"
+      }
+    ],
+    "flavor": "จำนวน: 3 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "relic-sky-gryphon",
+    "category": "relic",
+    "number": 13,
+    "nameTh": "กริฟฟอนสวรรค์",
+    "nameEn": "Sky Gryphon",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "มองเห็นและโจมตีผู้เล่นอื่นได้ใกล้ขึ้น **$-1$** ช่อง"
+      }
+    ],
+    "flavor": "จำนวน: 4 ใบ",
+    "artPrompt": "A majestic sky gryphon with golden-eagle feathers and pure white lion body, spreading massive wings atop a storm-swept mountain crag, wind swirling around its talons, mythic beast companion --ar 5:7"
+  },
+  {
+    "id": "relic-mist-unicorn",
+    "category": "relic",
+    "number": 14,
+    "nameTh": "ยูนิคอร์นหมอก",
+    "nameEn": "Mist Unicorn",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ผู้เล่นอื่นมองเห็นเราไกลขึ้น **$+1$** ช่อง และต้านทานคำสาปหน่วงเวลา"
+      }
+    ],
+    "flavor": "จำนวน: 4 ใบ",
+    "artPrompt": "An ethereal mist unicorn with a spiral horn glowing with soft moonlight, walking gracefully through dense moonlit silver fog, luminescent hooves barely touching the ground, magical and tranquil --ar 5:7"
+  },
+  {
+    "id": "spell-blink-teleport",
+    "category": "spell",
+    "number": 15,
+    "nameTh": "เคลื่อนย้ายพริบตา",
+    "nameEn": "Blink / Teleport",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ขโมยการ์ด 1 ใบจากมือหรืออุปกรณ์ของเป้าหมายในระยะ 1 ช่อง"
+      }
+    ],
+    "flavor": "จำนวน: 5 ใบ",
+    "artPrompt": "Card art icon, a shadowy silhouette knight instantly dissolving into swirling violet arcane feathers and starlight particles, reappearing behind an enemy, dimensional rift, dynamic magic --ar 5:7"
+  },
+  {
+    "id": "spell-dispel-magic",
+    "category": "spell",
+    "number": 16,
+    "nameTh": "เพลิงชำระล้าง",
+    "nameEn": "Dispel Magic",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ลบล้างผลของการ์ดเวทมนตร์หรือคำสาปทุกชนิดทันที (เทียบเท่า \"ไร้ผลพลัน\")"
+      }
+    ],
+    "flavor": "จำนวน: 4 ใบ",
+    "artPrompt": "Card art icon, a radiant burst of sacred white flame incinerating and shattering purple dark magical runes and chains, purification energy wave clearing corruption, glowing particles --ar 5:7"
+  },
+  {
+    "id": "spell-meteor-shower",
+    "category": "spell",
+    "number": 17,
+    "nameTh": "ห่าศรดวงดาว",
+    "nameEn": "Meteor Shower",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "โจมตีทุกคนรอบวง ผู้เล่นทุกคนต้องทิ้ง \"ม่านบาเรีย\" มิฉะนั้นจะเสียเลือด 1 หน่วย"
+      }
+    ],
+    "flavor": "จำนวน: 3 ใบ",
+    "artPrompt": "Card art icon, a sky of fiery flaming meteors and cosmic star fragments raining down upon a medieval castle courtyard, explosive shockwaves, apocalyptic epic fantasy magic --ar 5:7"
+  },
+  {
+    "id": "spell-divine-blessing",
+    "category": "spell",
+    "number": 18,
+    "nameTh": "สวดมนต์ศักดิ์สิทธิ์",
+    "nameEn": "Divine Blessing",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "จั่วการ์ด 2 ใบจากกองกลางขึ้นมือทันที"
+      }
+    ],
+    "flavor": "จำนวน: 4 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "spell-siren-s-call",
+    "category": "spell",
+    "number": 19,
+    "nameTh": "เสียงเพรียกแห่งไซเรน",
+    "nameEn": "Siren's Call",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "สั่งให้อัศวิน A ใช้ศรเวทโจมตีอัศวิน B หากไม่ทำ ต้องมอบอาวุธให้คุณ"
+      }
+    ],
+    "flavor": "จำนวน: 3 ใบ",
+    "artPrompt": ""
+  },
+  {
+    "id": "spell-blood-duel",
+    "category": "spell",
+    "number": 20,
+    "nameTh": "พันธนาการโลหิต",
+    "nameEn": "Blood Duel",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "ท้าดวลผู้เล่น 1 คน ทั้งสองฝ่ายต้องสลับกันทิ้ง \"ศรเวท\" ฝ่ายที่ไม่มีทิ้งจะเสียเลือด 1 หน่วย"
+      }
+    ],
+    "flavor": "จำนวน: 5 ใบ",
+    "artPrompt": "Card art icon, two crossed glowing blood-forged swords bound tightly together by thorny crimson chains of fate, sparks flying, dark colosseum background, lethal challenge --ar 5:7"
+  },
+  {
+    "id": "spell-blood-moon-cataclysm",
+    "category": "spell",
+    "number": 21,
+    "nameTh": "คำสาปจันทราสีเลือด",
+    "nameEn": "Blood Moon Cataclysm",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "วนรอบวง เปิดได้ **โพดำ ♠ แต้ม 2 ถึง 9** อุกกาบาตระเบิดทำดาเมจ **3 หน่วยทันที!** หากไม่ติด คำสาปจะลอยไปหาคนถัดไป"
+      }
+    ],
+    "flavor": "จำนวน: 2 ใบ",
+    "artPrompt": "Card art icon, a terrifying colossal blood-red eclipse moon hanging over a ruined fortress, eldritch crimson lightning arcing across the cracked sky, apocalyptic dark fantasy omen --ar 5:7"
+  },
+  {
+    "id": "spell-petrification-curse",
+    "category": "spell",
+    "number": 22,
+    "nameTh": "ผนึกศิลาบรรพกาล",
+    "nameEn": "Petrification Curse",
+    "title": "",
+    "hp": "",
+    "abilities": [
+      {
+        "name": "",
+        "text": "แปะหน้าเป้าหมาย เปิดตัดสินหากไม่ใช่ **ธาตุศักดิ์สิทธิ์ (♣)** จะกลายเป็นหิน ข้ามเฟส Action ทันที"
+      }
+    ],
+    "flavor": "จำนวน: 4 ใบ",
+    "artPrompt": "Card art icon, an armored knight slowly turning into cracked grey stone from the feet up, glowing pale grey petrification runes creeping over his chestplate, petrified statue fantasy --ar 5:7"
+  }
+]

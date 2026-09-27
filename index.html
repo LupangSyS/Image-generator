@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Card Forge — Trading Card Generator</title>
+<style>
+  :root{
+    --bg:#0e0f13;
+    --panel:#171921;
+    --panel-2:#1e2029;
+    --border:#2a2d3a;
+    --text:#e8e8ee;
+    --muted:#9a9db0;
+    --accent:#c0392b;
+    --accent-2:#3aa0c8;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  header{
+    padding:16px 24px;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  header h1{font-size:18px;margin:0;font-weight:600;}
+  header p{margin:2px 0 0;color:var(--muted);font-size:12px;}
+  .layout{
+    display:grid;
+    grid-template-columns:380px 1fr;
+    gap:0;
+    min-height:calc(100vh - 61px);
+  }
+  .panel{
+    background:var(--panel);
+    border-right:1px solid var(--border);
+    padding:20px;
+    overflow-y:auto;
+    max-height:calc(100vh - 61px);
+  }
+  .stage{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:32px;
+    overflow:auto;
+  }
+  fieldset{
+    border:1px solid var(--border);
+    border-radius:8px;
+    margin:0 0 16px;
+    padding:12px 14px 14px;
+  }
+  legend{
+    padding:0 6px;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--muted);
+  }
+  label{
+    display:block;
+    font-size:12px;
+    color:var(--muted);
+    margin:8px 0 4px;
+  }
+  label:first-child{margin-top:0;}
+  input[type=text], input[type=number], select, textarea{
+    width:100%;
+    background:var(--panel-2);
+    border:1px solid var(--border);
+    color:var(--text);
+    border-radius:6px;
+    padding:8px 10px;
+    font-size:13px;
+    font-family:inherit;
+  }
+  textarea{resize:vertical;min-height:60px;}
+  .row{display:flex;gap:10px;}
+  .row > div{flex:1;}
+  input[type=color]{
+    width:100%;height:34px;padding:2px;border-radius:6px;
+    border:1px solid var(--border);background:var(--panel-2);cursor:pointer;
+  }
+  input[type=file]{
+    width:100%;font-size:12px;color:var(--muted);
+  }
+  input[type=range]{width:100%;}
+  button{
+    cursor:pointer;
+    border:none;
+    border-radius:6px;
+    padding:10px 14px;
+    font-size:13px;
+    font-weight:600;
+    color:#fff;
+  }
+  .btn-primary{background:linear-gradient(180deg,#e0453a,var(--accent));width:100%;margin-top:4px;}
+  .btn-secondary{background:var(--panel-2);border:1px solid var(--border);color:var(--text);width:100%;margin-top:8px;}
+  .hint{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.4;}
+  canvas{
+    background:#000;
+    border-radius:14px;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+    max-width:100%;
+  }
+  .stage-inner{display:flex;flex-direction:column;align-items:center;gap:14px;}
+  .zoom-controls{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px;}
+  .zoom-controls button{padding:4px 10px;background:var(--panel-2);border:1px solid var(--border);color:var(--text);}
+  .field-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .keyword-row{display:flex;gap:8px;margin-bottom:6px;align-items:flex-start;}
+  .keyword-row textarea{min-height:44px;}
+  .keyword-row .kw-label{width:110px;flex:none;}
+  .icon-btn{
+    background:var(--panel-2);border:1px solid var(--border);color:var(--muted);
+    width:28px;height:28px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  select{appearance:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%239a9db0'/></svg>");background-repeat:no-repeat;background-position:right 10px center;}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Card Forge</h1>
+    <p>Local trading-card renderer — no AI image API, all Canvas.</p>
+  </div>
+  <div class="zoom-controls">
+    <span id="zoomLabel">100%</span>
+  </div>
+</header>
+
+<div class="layout">
+  <div class="panel" id="panel">
+    <fieldset>
+      <legend>Identity</legend>
+      <label>Card Name</label>
+      <input type="text" id="f-name" value="MORDRED" />
+      <label>Subtitle (localized / flavor name)</label>
+      <input type="text" id="f-subname" value="มอร์เดร็ด" />
+      <div class="field-2col">
+        <div>
+          <label>Cost / Number</label>
+          <input type="number" id="f-cost" value="4" />
+        </div>
+        <div>
+          <label>Rarity</label>
+          <select id="f-rarity">
+            <option>COMMON</option>
+            <option>UNCOMMON</option>
+            <option>RARE</option>
+            <option>EPIC</option>
+            <option selected>MYTHIC</option>
+            <option>LEGENDARY</option>
+          </select>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Artwork</legend>
+      <label>Upload illustration</label>
+      <input type="file" id="f-art" accept="image/*" />
+      <label>Focal point (drag hint: X / Y %)</label>
+      <div class="row">
+        <div><input type="range" id="f-artx" min="0" max="100" value="50" /></div>
+        <div><input type="range" id="f-arty" min="0" max="100" value="50" /></div>
+      </div>
+      <div class="hint">No AI generation here — bring your own art (Midjourney export, stock image, drawing, photo). The renderer only handles layout, frame, text and effects.</div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Class / Title Bar</legend>
+      <label>Title line</label>
+      <input type="text" id="f-title" value="The Usurper Prince · เจ้าชายกบฏ" />
+      <label>Show crown icon</label>
+      <select id="f-crown">
+        <option value="1" selected>Yes</option>
+        <option value="0">No</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Abilities</legend>
+      <div class="keyword-row">
+        <div class="kw-label"><input type="text" id="f-ab1-name" value="คมดาบอาชญพิษ:" /></div>
+        <textarea id="f-ab1-text">ศัตรูที่โดนดีตะติดพิษ พื้นเลือดไม่ได้จนกว่าจะจบรอบของมอร์เดร็ด</textarea>
+      </div>
+      <div class="keyword-row">
+        <div class="kw-label"><input type="text" id="f-ab2-name" value="บัญชาทรยศ:" /></div>
+        <textarea id="f-ab2-text">หากโจมตี "กษัตริย์อาเธอร์" จะได้จั่วการ์ดฟรี 1 ใบก่อนคิดดาเมจ</textarea>
+      </div>
+      <label>Flavor text (italic, bottom)</label>
+      <textarea id="f-flavor">"บัลลังก์นี้ควรเป็นของข้าตั้งแต่แรก และข้าจะทวงคืนด้วยเปลวเพลิง"</textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Stats</legend>
+      <div class="row">
+        <div>
+          <label>Attack</label>
+          <input type="number" id="f-atk" value="4" />
+        </div>
+        <div>
+          <label>Defense / HP</label>
+          <input type="number" id="f-def" value="4" />
+        </div>
+      </div>
+      <label>Footer label (set/series text)</label>
+      <input type="text" id="f-footer" value="CAMELOT • CHAMPION 08" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Theme</legend>
+      <div class="row">
+        <div>
+          <label>Frame color</label>
+          <input type="color" id="f-color-frame" value="#c0392b" />
+        </div>
+        <div>
+          <label>Attack badge color</label>
+          <input type="color" id="f-color-atk" value="#c0392b" />
+        </div>
+        <div>
+          <label>Defense badge color</label>
+          <input type="color" id="f-color-def" value="#3aa0c8" />
+        </div>
+      </div>
+    </fieldset>
+
+    <button class="btn-primary" id="btn-export">Download PNG (4K)</button>
+    <button class="btn-secondary" id="btn-save">Save card data (.json)</button>
+    <button class="btn-secondary" id="btn-load-trigger">Load card data (.json)</button>
+    <input type="file" id="f-load" accept="application/json" style="display:none" />
+    <div class="hint">Everything renders locally in your browser via Canvas 2D. Nothing is uploaded anywhere.</div>
+  </div>
+
+  <div class="stage">
+    <div class="stage-inner">
+      <canvas id="cardCanvas" width="900" height="1260"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="card-renderer.js"></script>
+</body>
+</html>
